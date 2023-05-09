@@ -27,18 +27,22 @@ class RenderUnicorn {
 
 $u = new Unicorn("Bosse", "light green", "90kg");
 $v = new Unicorn("Lisa", "blue", "80kg");
-$a = new Unicorn("A", "Orange", "70kg");
-$b = new Unicorn("B", "Green", "100kg");
-$c = new Unicorn("C", "White", "60kg");
 
 
+
+$allUnicorns= [
+    ["Bosse", "light green", "90kg"],
+    ["Lisa", "blue", "80kg"],
+    ["A", "Orange", "70kg"],
+    ["B", "Green", "100kg"],
+    ["C", "White", "60kg"]
+    ];
+
+$renderer->renderMessage($allUnicorns);
 
 $renderer = new RenderUnicorn();
 $renderer->renderMessage($u);
 $renderer->renderMessage($v);
-$renderer->renderMessage($a);
-$renderer->renderMessage($b);
-$renderer->renderMessage($c);
 
 function add (int $u, int $v) {
     return $u + $v;
