@@ -26,9 +26,6 @@ class RenderUnicorn {
     }
 }
 
-$u = new Unicorn("Bosse", "light green", "90kg");
-$v = new Unicorn("Lisa", "blue", "80kg");
-
 
 
 $allUnicorns =  [
@@ -61,15 +58,10 @@ echo add(1,1);
     <title>Document</title>
 </head>
 <body>
-    <?php
-    foreach($allUnicorns as $all){
-        ?>
-        <?php
-        foreach($all as $nu){
-            echo "<h2>$nu</h2>";
-        }
-    }
-    
+     <?php
+     foreach($allUnicorns as $allinfo){      
+         echo $allinfo;
+         }
     ?>
 </body>
 </html>
