@@ -22,6 +22,7 @@ class RenderUnicorn {
         // echo $unicorn->getMessage();
   
         echo "<h1>{$unicorn->getMessage()}</h1>";
+
     }
 }
 
@@ -30,7 +31,7 @@ $v = new Unicorn("Lisa", "blue", "80kg");
 
 
 
-$allUnicorns= [
+$allUnicorns =  [
     ["Bosse", "light green", "90kg"],
     ["Lisa", "blue", "80kg"],
     ["A", "Orange", "70kg"],
@@ -39,8 +40,6 @@ $allUnicorns= [
     ];
 
 $renderer = new RenderUnicorn();
-$renderer->renderMessage($u);
-$renderer->renderMessage($v);
 $renderer->renderMessage($allUnicorns);
 
 
@@ -53,4 +52,24 @@ echo add(1,1);
 ?>
 
 
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php
+    foreach($allUnicorns as $all){
+        ?>
+        <?php
+        foreach($all as $nu){
+            echo "<h2>$nu</h2>";
+        }
+    }
+    
+    ?>
+</body>
+</html>
