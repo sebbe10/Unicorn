@@ -38,11 +38,11 @@ $allUnicorns= [
     ["C", "White", "60kg"]
     ];
 
-$renderer->renderMessage($allUnicorns);
-
 $renderer = new RenderUnicorn();
 $renderer->renderMessage($u);
 $renderer->renderMessage($v);
+$renderer->renderMessage($allUnicorns);
+
 
 function add (int $u, int $v) {
     return $u + $v;
